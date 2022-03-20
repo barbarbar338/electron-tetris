@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import "./styles/tailwind.css";
 import "./styles/index.css";
 import "./styles/titlebar.css";
+import "./styles/tetris.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import { Router } from "./router";

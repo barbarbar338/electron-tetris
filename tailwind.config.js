@@ -1,3 +1,5 @@
+const twLineClamp = require("@tailwindcss/line-clamp");
+
 module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
 	darkMode: "media",
@@ -7,5 +9,5 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [twLineClamp],
 };

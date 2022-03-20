@@ -2,7 +2,7 @@
 	-webkit-app-region: drag;
 	margin: 0;
 	display: flex;
-	background-color: black;
+	background-color: rgb(16, 120, 255);
 	width: 100%;
 	height: 2rem;
 }

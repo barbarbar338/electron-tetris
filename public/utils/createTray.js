@@ -1,5 +1,4 @@
 const { app, Tray, Menu, shell } = require("electron");
-const { showNotification } = require("./showNotification");
 const config = require("./config");
 
 exports.createTray = () => {
@@ -26,21 +25,18 @@ exports.createTray = () => {
 						},
 					},
 					{
+						label: "Webpage",
+						click: () => {
+							shell.openExternal("https://338.rocks");
+						},
+					},
+					{
 						label: "E-Mail demirci.baris38@gmail.com",
 						click: () => {
 							shell.openExternal("mailto:hi@338.rocks");
 						},
 					},
 				],
-			},
-			{
-				label: "Send Notification",
-				click: () => {
-					showNotification(
-						"This Notification Comes From Tray",
-						"Hello, world!",
-					);
-				},
 			},
 			{
 				label: "Quit",

@@ -1,14 +1,14 @@
 {
-	"name": "electron-react-tailwind-template",
+	"name": "electron-tetris",
 	"author": {
 		"email": "demirci.baris38@gmail.com",
 		"name": "Barış DEMİRCİ",
 		"url": "https://338.rocks"
 	},
-	"description": "Electron app template with React and Tailwind CSS",
+	"description": "📦 Tetris game made with Electron",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/barbarbar338/electron-react-tailwind-template"
+		"url": "https://github.com/barbarbar338/electron-tetris"
 	},
 	"license": "GPL-3.0",
 	"version": "1.0.0",
@@ -33,6 +33,7 @@
 	},
 	"dependencies": {
 		"@electron/remote": "^2.0.5",
+		"@tailwindcss/line-clamp": "^0.3.1",
 		"auto-launch": "^5.0.5",
 		"electron-is-dev": "^2.0.0",
 		"electron-reloader": "^1.2.3",
@@ -41,6 +42,7 @@
 		"react-dom": "^17.0.2",
 		"react-icons": "^4.3.1",
 		"react-router-dom": "^6.2.1",
+		"react-tetris": "github:brandly/react-tetris",
 		"react-toastify": "^8.2.0",
 		"react-use": "^17.3.2"
 	},
@@ -75,7 +77,7 @@
 	},
 	"build": {
 		"extends": null,
-		"appId": "com.example.app",
+		"appId": "rocks.338.tetris",
 		"files": [
 			"dist/**/*",
 			"build/**/*",

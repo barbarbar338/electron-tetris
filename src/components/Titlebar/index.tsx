@@ -1,17 +1,11 @@
-import { FC, useEffect, useState } from "react";
-import Amethyst from "../../assets/amethyst.png";
-import {
-	IoExpandOutline,
-	IoContractOutline,
-	IoCloseOutline,
-	IoRemove,
-} from "react-icons/io5";
+import { FC, useEffect } from "react";
+import Icon from "../../assets/icon.png";
+import { IoCloseOutline, IoRemove } from "react-icons/io5";
 
 const { getCurrentWindow, app } = window.require("@electron/remote");
 
 export const Titlebar: FC = () => {
 	const currentWindow = getCurrentWindow();
-	const [maximized, setMaximized] = useState(currentWindow.isMaximized());
 
 	useEffect(() => {
 		const icon = document.getElementById("icon") as HTMLElement;
@@ -19,12 +13,7 @@ export const Titlebar: FC = () => {
 	});
 
 	const onMinimize = () => currentWindow.minimize();
-	const onMaximize = () => {
-		setMaximized(!currentWindow.isMaximized());
-		currentWindow.isMaximized()
-			? currentWindow.unmaximize()
-			: currentWindow.maximize();
-	};
+
 	const onQuit = () => app.quit();
 
 	return (
@@ -32,13 +21,13 @@ export const Titlebar: FC = () => {
 			<div className="menu-button-container">
 				<img
 					id="icon"
-					src={Amethyst}
+					src={Icon}
 					className="menu-icon select-none"
-					alt="amethyst"
+					alt="icon"
 				/>
 			</div>
 			<div className="app-name-container select-none">
-				<p>Electron React Tailwind Template</p>
+				<p>Electron Tetris</p>
 			</div>
 			<div className="window-controls-container">
 				<button
@@ -46,12 +35,6 @@ export const Titlebar: FC = () => {
 					onClick={onMinimize}
 				>
 					<IoRemove />
-				</button>
-				<button
-					className="min-max-button focus:outline-none hover:bg-gray-700"
-					onClick={onMaximize}
-				>
-					{maximized ? <IoContractOutline /> : <IoExpandOutline />}
 				</button>
 				<button
 					className="close-button focus:outline-none hover:bg-gray-700"

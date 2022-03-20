@@ -1,25 +1,23 @@
-# ⚛ Electron - React - TailwindCSS Template With Router
+# 📦 Tetris game made with Electron
 
-A very simple and functional template for you to use Electron, React and TailwindCSS together.
+A classic game of Tetris made with Electron.
 
-# 🎀 Features
+# 💻 Controls
 
--   Use React for creating interfaces
--   Use `react-router-dom` for routing
--   Use TailwindCSS for styling
--   Basic functions are ready to use such as creating tray icon, creating notifications etc.
+-   Left arrow: `Move left`
+-   Right arrow: `Move right`
+-   Up arrow: `Rotate`
+-   Down arrow: `Soft Drop`
+-   Space: `Hard Drop`
+-   Shift: `Hold`
 
-# 🤓 Insatllation
+# 📦 Building
 
 -   Clone repo
--   Run `npm install` or `yarn`
--   Run `npm run dev` or `yarn dev` to start development server
--   Run `npm run build` or `yarn build` to create executable
+-   Install dependencies with `npm install` or `yarn`
+-   Run `npm build` or `yarn build`
 
-# 🧦 Contributing
+# 👀 Preview
 
-Fell free to use GitHub's features.
-
-# 📄 Copyrights
-
-Copyrights for `public/favicon.ico`, `public/icon.ico` and `public/icon.png` are owned by [Brawlhalla, Blue Mammoth Games](https://www.brawlhalla.com/)
+![1](/public/preview/1.png)
+![2](/public/preview/2.png)
