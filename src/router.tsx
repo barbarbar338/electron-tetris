@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import type { FC } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { IndexPage } from "./pages";
 import { PopupPage } from "./pages/popup";
 

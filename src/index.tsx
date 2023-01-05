@@ -1,19 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { ToastContainer } from "react-toastify";
-
-import "./styles/tailwind.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import "./styles/index.css";
-import "./styles/titlebar.css";
+import "./styles/tailwind.css";
 import "./styles/tetris.css";
-import "react-toastify/dist/ReactToastify.css";
+import "./styles/titlebar.css";
 
 import { Router } from "./router";
 
-ReactDOM.render(
-	<React.StrictMode>
-		<ToastContainer position="bottom-right" autoClose={2500} />
+const root = createRoot(document.getElementById("root") as HTMLDivElement);
+
+root.render(
+	<StrictMode>
 		<Router />
-	</React.StrictMode>,
-	document.getElementById("root"),
+	</StrictMode>,
 );

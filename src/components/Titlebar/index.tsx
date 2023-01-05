@@ -1,6 +1,6 @@
-import { FC, useEffect } from "react";
-import Icon from "../../assets/icon.png";
+import { useEffect, type FC } from "react";
 import { IoCloseOutline, IoRemove } from "react-icons/io5";
+import Icon from "../../assets/icon.png";
 
 const { getCurrentWindow, app } = window.require("@electron/remote");
 
@@ -31,12 +31,14 @@ export const Titlebar: FC = () => {
 			</div>
 			<div className="window-controls-container">
 				<button
+					title="minimize"
 					className="minimize-button focus:outline-none hover:bg-gray-700"
 					onClick={onMinimize}
 				>
 					<IoRemove />
 				</button>
 				<button
+					title="quit"
 					className="close-button focus:outline-none hover:bg-gray-700"
 					onClick={onQuit}
 				>

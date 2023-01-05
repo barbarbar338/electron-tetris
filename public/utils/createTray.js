@@ -7,21 +7,33 @@ exports.createTray = () => {
 	t.setContextMenu(
 		Menu.buildFromTemplate([
 			{
-				label: "Show App",
-				click: () => {
-					if (!config.mainWindow.isVisible())
-						config.mainWindow.show();
-				},
+				label: "Links",
+				submenu: [
+					{
+						label: "Download",
+						click: () => {
+							shell.openExternal(
+								"https://github.com/barisbored/electron-tetris/releases",
+							);
+						},
+					},
+					{
+						label: "Source Code",
+						click: () => {
+							shell.openExternal(
+								"https://github.com/barisbored/electron-tetris",
+							);
+						},
+					},
+				],
 			},
 			{
 				label: "Creator",
 				submenu: [
 					{
-						label: "GitHub @barbarbar338",
+						label: "GitHub @barisbored",
 						click: () => {
-							shell.openExternal(
-								"https://github.com/barbarbar338",
-							);
+							shell.openExternal("https://github.com/barisbored");
 						},
 					},
 					{
@@ -47,6 +59,11 @@ exports.createTray = () => {
 			},
 		]),
 	);
+
+	t.on("click", (_, bounds) => {
+		if (config.mainWindow.isVisible()) config.mainWindow.hide();
+		else config.mainWindow.show();
+	});
 
 	return t;
 };
